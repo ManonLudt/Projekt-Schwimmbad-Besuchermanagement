@@ -10,10 +10,13 @@ Ordner
 --------
 ```
 Dokumentation:
-####Hier ist alle funktionalen Anforderungen enthalten.
+Hier ist alle funktionalen Anforderungen enthalten.
 
-+ Planungsdokumente  
-+ Implementierung
+Planungsdokumente:
+Hier ist die Datenbank vorhanden.
+
+Implementierung:
+Hier wird der Papierprototyp gespeichert
 ```
 
 
