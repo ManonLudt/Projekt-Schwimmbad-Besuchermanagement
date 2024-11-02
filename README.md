@@ -16,7 +16,7 @@ Planungsdokumente:
 Hier ist die Datenbank vorhanden.
 
 Implementierung:
-Hier wird der Papierprototyp gespeichert
+Hier wird der Papierprototyp gespeichert.
 ```
 
 
