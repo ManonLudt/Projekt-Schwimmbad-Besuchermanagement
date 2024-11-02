@@ -1,7 +1,7 @@
 Funktionale Anforderungen
 
-1. Das System ermöglicht es Eintrittskarten zu verkaufen (10)
-2. Durch das System können Besucherzahlen zu erfasst werden (7,5)
-3. Das System ermöglicht es die Auslastung des Schwimmbads zu überwachen (5)
-4. Individeuelle Rabatt für z.B. Schüler und Studenten können berücksichtigt werden
-5. Reservierungen von Kunden können überprüft und berücksichtigt werden
+1. Das System ermÃ¶glicht es Eintrittskarten zu verkaufen (10)
+2. Durch das System kÃ¶nnen Besucherzahlen zu erfasst werden (7,5)
+3. Das System ermÃ¶glicht es die Auslastung des Schwimmbads zu Ã¼berwachen (5)
+4. Individeuelle Rabatt fÃ¼r z.B. SchÃ¼ler und Studenten kÃ¶nnen berÃ¼cksichtigt werden (3,5)
+5. Reservierungen von Kunden kÃ¶nnen Ã¼berprÃ¼ft und berÃ¼cksichtigt werden (3,5)
