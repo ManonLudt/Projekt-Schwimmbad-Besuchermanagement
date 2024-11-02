@@ -9,7 +9,7 @@ des Besuchermanagments eines Schwimmbads darzustellen.
 Ordner
 --------
 ```
-* Dokumentation
+1. Dokumentation
 
 ./Planungsdokumente  
 ./Implementierung
