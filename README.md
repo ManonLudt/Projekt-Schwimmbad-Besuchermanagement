@@ -1,4 +1,11 @@
 Projekt-Schwimmbad
 =====
-Hier Text einfügen
+
+Beschreibung
 --------
+An diesem Projekt werden werden verschiedenen Schritte der Projektplanung, Implementierung und Qualitätssicherung durchgeführt, um die Abläufe
+des Besuchermanagment eines Schwimmbads darzustellen.
+
+Ordner
+--------
+
