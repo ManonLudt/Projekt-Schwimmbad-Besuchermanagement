@@ -8,8 +8,11 @@ des Besuchermanagments eines Schwimmbads darzustellen.
 
 Ordner
 --------
-./Dokumentation  
+```
+./Dokumentation
+
 ./Planungsdokumente  
 ./Implementierung
+```
 
 
