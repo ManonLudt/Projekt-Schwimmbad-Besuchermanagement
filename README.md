@@ -10,7 +10,7 @@ Ordner
 --------
 ```
 Dokumentation:
-Hier ist alle funktionalen Anforderungen enthalten.
+Hier ist sind funktionalen Anforderungen enthalten.
 
 Planungsdokumente:
 Hier ist die Datenbank vorhanden.
