@@ -9,7 +9,9 @@ des Besuchermanagments eines Schwimmbads darzustellen.
 Ordner
 --------
 ```
-+ Dokumentation
+Dokumentation:
+####Hier ist alle funktionalen Anforderungen enthalten.
+
 + Planungsdokumente  
 + Implementierung
 ```
