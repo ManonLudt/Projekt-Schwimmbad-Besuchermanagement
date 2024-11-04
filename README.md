@@ -17,8 +17,7 @@ Echtzeit-Daten: Das System zeigt in Echtzeit die aktuelle Auslastung des Schwimm
 Berichte und Analysen: Das System generiert regelmäßige Berichte über Besucherzahlen und Auslastung, die für die Planung und Optimierung des Betriebs genutzt werden können.
 
    
-3. Technische Umsetzung
----------
+## 3. Technische Umsetzung
 * Software-Architektur:
 Backend: Ein robustes Backend-System, das die Datenbankverwaltung, Benutzerverwaltung und die Integration mit verschiedenen Hardware-Komponenten (z.B. Drehkreuze, Scanner) übernimmt.
 Frontend: Eine intuitive Benutzeroberfläche für die Website und mobile App, die den Kauf von Eintrittskarten und die Anzeige von Echtzeit-Informationen ermöglicht.
@@ -27,13 +26,13 @@ Drehkreuze und Scanner: Diese Geräte sind mit dem zentralen System verbunden un
 Sensoren und Kameras: Diese Geräte überwachen die Besucherzahlen und übermitteln die Daten an das zentrale System.
 
   
-##4. Vorteile des Systems
+## 4. Vorteile des Systems
 *Effizienzsteigerung: Reduzierung von Warteschlangen und Verbesserung des Besuchererlebnisses durch schnellen und einfachen Zugang.
 *Bessere Planung: Echtzeit-Daten und Berichte ermöglichen eine bessere Planung und Optimierung des Schwimmbadbetriebs.
 *Sicherheit: Überwachung der Besucherzahlen hilft, Überfüllungen zu vermeiden und die Sicherheit der Besucher zu gewährleisten.
 
   
-##5. Implementierungsplan
+## 5. Implementierungsplan
 * Phase 1: Anforderungsanalyse und Planung
 Ermittlung der genauen Anforderungen und Erstellung eines detaillierten Projektplans.
 * Phase 2: Entwicklung und Test
