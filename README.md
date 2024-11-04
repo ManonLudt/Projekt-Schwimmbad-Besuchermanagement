@@ -16,25 +16,27 @@ Zählung der Besucher: Sensoren und Kameras können die Anzahl der Personen im S
 Echtzeit-Daten: Das System zeigt in Echtzeit die aktuelle Auslastung des Schwimmbads an. Dies hilft dem Management, Überfüllungen zu vermeiden und die Besucherströme besser zu steuern.
 Berichte und Analysen: Das System generiert regelmäßige Berichte über Besucherzahlen und Auslastung, die für die Planung und Optimierung des Betriebs genutzt werden können.
    
-3. Technische Umsetzung
-Software-Architektur:
+##3. Technische Umsetzung
+* Software-Architektur:
 Backend: Ein robustes Backend-System, das die Datenbankverwaltung, Benutzerverwaltung und die Integration mit verschiedenen Hardware-Komponenten (z.B. Drehkreuze, Scanner) übernimmt.
 Frontend: Eine intuitive Benutzeroberfläche für die Website und mobile App, die den Kauf von Eintrittskarten und die Anzeige von Echtzeit-Informationen ermöglicht.
-Hardware-Komponenten:
+* Hardware-Komponenten:
 Drehkreuze und Scanner: Diese Geräte sind mit dem zentralen System verbunden und ermöglichen die Erfassung der Eintrittskarten und Besucherzahlen.
 Sensoren und Kameras: Diese Geräte überwachen die Besucherzahlen und übermitteln die Daten an das zentrale System.
-5. Vorteile des Systems
-Effizienzsteigerung: Reduzierung von Warteschlangen und Verbesserung des Besuchererlebnisses durch schnellen und einfachen Zugang.
-Bessere Planung: Echtzeit-Daten und Berichte ermöglichen eine bessere Planung und Optimierung des Schwimmbadbetriebs.
-Sicherheit: Überwachung der Besucherzahlen hilft, Überfüllungen zu vermeiden und die Sicherheit der Besucher zu gewährleisten.
-6. Implementierungsplan
-Phase 1: Anforderungsanalyse und Planung
+  
+##4. Vorteile des Systems
+*Effizienzsteigerung: Reduzierung von Warteschlangen und Verbesserung des Besuchererlebnisses durch schnellen und einfachen Zugang.
+*Bessere Planung: Echtzeit-Daten und Berichte ermöglichen eine bessere Planung und Optimierung des Schwimmbadbetriebs.
+*Sicherheit: Überwachung der Besucherzahlen hilft, Überfüllungen zu vermeiden und die Sicherheit der Besucher zu gewährleisten.
+  
+5. Implementierungsplan
+* Phase 1: Anforderungsanalyse und Planung
 Ermittlung der genauen Anforderungen und Erstellung eines detaillierten Projektplans.
-Phase 2: Entwicklung und Test
+* Phase 2: Entwicklung und Test
 Entwicklung der Software und Integration der Hardware-Komponenten. Durchführung umfangreicher Tests, um die Funktionalität und Zuverlässigkeit des Systems sicherzustellen.
-Phase 3: Implementierung und Schulung
+* Phase 3: Implementierung und Schulung
 Installation des Systems im Schwimmbad und Schulung des Personals im Umgang mit dem neuen System.
-Phase 4: Betrieb und Wartung
+* Phase 4: Betrieb und Wartung
 Regelmäßige Wartung und Updates des Systems, um eine reibungslose Funktion zu gewährleisten.
 Dieses Besuchermanagementsystem wird dazu beitragen, den Betrieb des Schwimmbads effizienter zu gestalten und den Besuchern ein besseres Erlebnis zu bieten.
     
