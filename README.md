@@ -1,12 +1,11 @@
 Projekt-Schwimmbad Besuchermanagment
 =====
 
-1. Ziel des Projekts
----------
+## 1. Ziel des Projekts
 Das Hauptziel des Projekts ist die Entwicklung und Implementierung eines umfassenden Besuchermanagementsystems, das den Verkauf von Eintrittskarten, die Erfassung von Besucherzahlen und die Überwachung der Auslastung des Schwimmbads ermöglicht. Dies soll die Effizienz und den Komfort für Besucher und Betreiber gleichermaßen verbessern.
+-------------
 
-2. Funktionen des Systems
----------------
+## 2. Funktionen des Systems
 Eintrittskartenverkauf:
 * Online-Verkauf: Besucher können Eintrittskarten über eine benutzerfreundliche Website oder mobile App kaufen. Dies reduziert Warteschlangen und ermöglicht eine bessere Planung.
 * Vor-Ort-Verkauf: An Kassenautomaten oder Schaltern im Schwimmbad können Besucher ebenfalls Eintrittskarten erwerben. Diese Automaten sind mit dem zentralen System verbunden, um Echtzeit-Daten zu gewährleisten.
@@ -18,7 +17,6 @@ Echtzeit-Daten: Das System zeigt in Echtzeit die aktuelle Auslastung des Schwimm
 Berichte und Analysen: Das System generiert regelmäßige Berichte über Besucherzahlen und Auslastung, die für die Planung und Optimierung des Betriebs genutzt werden können.
    
 3. Technische Umsetzung
-------------------
 Software-Architektur:
 Backend: Ein robustes Backend-System, das die Datenbankverwaltung, Benutzerverwaltung und die Integration mit verschiedenen Hardware-Komponenten (z.B. Drehkreuze, Scanner) übernimmt.
 Frontend: Eine intuitive Benutzeroberfläche für die Website und mobile App, die den Kauf von Eintrittskarten und die Anzeige von Echtzeit-Informationen ermöglicht.
