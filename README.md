@@ -17,7 +17,7 @@ Echtzeit-Daten: Das System zeigt in Echtzeit die aktuelle Auslastung des Schwimm
 Berichte und Analysen: Das System generiert regelmäßige Berichte über Besucherzahlen und Auslastung, die für die Planung und Optimierung des Betriebs genutzt werden können.
 
    
-##3. Technische Umsetzung
+3. Technische Umsetzung
 --
 * Software-Architektur:
 Backend: Ein robustes Backend-System, das die Datenbankverwaltung, Benutzerverwaltung und die Integration mit verschiedenen Hardware-Komponenten (z.B. Drehkreuze, Scanner) übernimmt.
