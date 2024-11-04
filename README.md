@@ -18,6 +18,7 @@ Berichte und Analysen: Das System generiert regelmäßige Berichte über Besuche
 
    
 ##3. Technische Umsetzung
+--
 * Software-Architektur:
 Backend: Ein robustes Backend-System, das die Datenbankverwaltung, Benutzerverwaltung und die Integration mit verschiedenen Hardware-Komponenten (z.B. Drehkreuze, Scanner) übernimmt.
 Frontend: Eine intuitive Benutzeroberfläche für die Website und mobile App, die den Kauf von Eintrittskarten und die Anzeige von Echtzeit-Informationen ermöglicht.
