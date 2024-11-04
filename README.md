@@ -16,7 +16,8 @@ Zählung der Besucher: Sensoren und Kameras können die Anzahl der Personen im S
 Echtzeit-Daten: Das System zeigt in Echtzeit die aktuelle Auslastung des Schwimmbads an. Dies hilft dem Management, Überfüllungen zu vermeiden und die Besucherströme besser zu steuern.
 Berichte und Analysen: Das System generiert regelmäßige Berichte über Besucherzahlen und Auslastung, die für die Planung und Optimierung des Betriebs genutzt werden können.
    
-##3. Technische Umsetzung
+3. Technische Umsetzung
+-----
 * Software-Architektur:
 Backend: Ein robustes Backend-System, das die Datenbankverwaltung, Benutzerverwaltung und die Integration mit verschiedenen Hardware-Komponenten (z.B. Drehkreuze, Scanner) übernimmt.
 Frontend: Eine intuitive Benutzeroberfläche für die Website und mobile App, die den Kauf von Eintrittskarten und die Anzeige von Echtzeit-Informationen ermöglicht.
