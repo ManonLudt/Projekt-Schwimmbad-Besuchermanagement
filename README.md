@@ -1,4 +1,4 @@
-Projekt-Schwimmbad
+Projekt-Schwimmbad Besuchermanagment
 =====
 
 Beschreibung
@@ -13,7 +13,7 @@ Dokumentation:
 Hier ist sind funktionalen Anforderungen enthalten.
 
 Planungsdokumente:
-Hier ist die Datenbank vorhanden.
+Hier ist die Datenbank, sowie ein ER-Diagramm dieser vorhanden.
 
 Implementierung:
 Hier wird der Papierprototyp gespeichert.
