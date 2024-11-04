@@ -13,10 +13,10 @@ Dokumentation:
 Hier ist sind funktionalen Anforderungen enthalten.
 
 Planungsdokumente:
-Hier ist die Datenbank, sowie ein ER-Diagramm dieser vorhanden.
+Hier ist die Datenbank vorhanden.
 
 Implementierung:
-Hier wird der Papierprototyp gespeichert.
+Hier wird der Papierprototyp, sowie ein ER-Diagramm der Datenbank gespeichert.
 ```
 
 
