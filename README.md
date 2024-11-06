@@ -53,7 +53,7 @@ Ordner
 --------
 ```
 Dokumentation:
-Hier ist sind funktionalen Anforderungen enthalten.
+Hier sind funktionalen Anforderungen enthalten.
 
 Planungsdokumente:
 Hier ist der SQL-Code der Datenbank vorhanden.
