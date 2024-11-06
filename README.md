@@ -56,7 +56,7 @@ Dokumentation:
 Hier ist sind funktionalen Anforderungen enthalten.
 
 Planungsdokumente:
-Hier ist die Datenbank vorhanden.
+Hier ist der SQL-Code der Datenbank vorhanden.
 
 Implementierung:
 Hier wird der Papierprototyp, sowie ein ER-Diagramm der Datenbank gespeichert.
