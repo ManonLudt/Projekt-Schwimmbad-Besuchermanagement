@@ -26,7 +26,8 @@ create table Besucher
 	ID_Besucher int primary key IDENTITY(1,1),
 	Vorname varchar(100),
 	Nachname varchar(100),
-	Alter int
+	Alter int,
+	Status varchar(100)
 );
 
 create table Status
@@ -41,6 +42,7 @@ create table Karten
 	ID_Karten int primary key IDENTITY(1,1),
 	Bezeichnung varchar(100),
 	Anzahl int,
+	Reservierung varchar(100),
 	Rabatt double,
 	CONSTRAINT fk_besucher_karten FOREIGN KEY(ID_Besucher) REFERENCES Nutzer(ID_Besucher),
 	CONSTRAINT fk_schwimmbad_karten FOREIGN KEY(ID_Schwimmbad) REFERENCES Nutzer(ID_Schwimmbad)
