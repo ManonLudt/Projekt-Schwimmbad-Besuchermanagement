@@ -1,4 +1,4 @@
-Projekt-Schwimmbad Besuchermanagment
+Projekt-Schwimmbad Besuchermanagement
 =====
 
 ## 1. Ziel des Projekts
