@@ -6,10 +6,12 @@ Das Hauptziel des Projekts ist die Entwicklung und Implementierung eines umfasse
 
 
 ## 2. Funktionen des Systems
-Eintrittskartenverkauf:
+### Eintrittskartenverkauf:
 * Online-Verkauf: Besucher können Eintrittskarten über eine benutzerfreundliche Website oder mobile App kaufen. Dies reduziert Warteschlangen und ermöglicht eine bessere Planung.
 * Vor-Ort-Verkauf: An Kassenautomaten oder Schaltern im Schwimmbad können Besucher ebenfalls Eintrittskarten erwerben. Diese Automaten sind mit dem zentralen System verbunden, um Echtzeit-Daten zu gewährleisten.
-Erfassung der Besucherzahlen:
+* Reservierungen: Über eine benutzerfreundliche Website oder mobile App wird es auch ermöglicht Reservierungen vorzunehmen.
+* Rabatte: Zudem erkennt das System durch den Status des Kunden möglich Rabatte, wie Kinder, Schüler oder Studenten.
+### Erfassung der Besucherzahlen:
 * Eingangskontrolle: Drehkreuze oder Scanner erfassen die Eintrittskarten der Besucher beim Betreten des Schwimmbads. Diese Daten werden in Echtzeit an das zentrale System übermittelt.
 Zählung der Besucher: Sensoren und Kameras können die Anzahl der Personen im Schwimmbadbereich überwachen und so eine genaue Erfassung der aktuellen Besucherzahl ermöglichen.
 * Überwachung der Auslastung:
