@@ -46,8 +46,11 @@ create table Schwimmbad
 (
 	ID_Schwimmbad int primary key identity(1,1),
 	Name varchar(100),
+	Straße varchar(100),
+	Ort varchar(100),
+	PLZ int,
 	Auslastung int,
-	Anzahl int
+	CONSTRAINT fk_besucher_reservierung FOREIGN KEY(ID_Schwimmbad) REFERENCES Besucher(ID_Besucher),
 );
 
 create table Karten
@@ -55,7 +58,6 @@ create table Karten
 	ID_Karten int primary key IDENTITY(1,1),
 	Bezeichnung varchar(100),
 	Anzahl int,
-	Reservierung varchar(100),
 	CONSTRAINT fk_schwimmbad_karten FOREIGN KEY(ID_Karten) REFERENCES Schwimmbad(ID_Schwimmbad)
 );
 
