@@ -2,7 +2,7 @@ Projekt-Schwimmbad Besuchermanagement
 =====
 
 ## 1. Ziel des Projekts
-Das Hauptziel des Projekts ist die Entwicklung und Implementierung eines umfassenden Besuchermanagementsystems, das den Verkauf von Eintrittskarten, die Erfassung von Besucherzahlen und die Überwachung der Auslastung des Schwimmbads ermöglicht. Dies soll die Effizienz und den Komfort für Besucher und Betreiber gleichermaßen verbessern.
+Mein Name ist Manon Ludt und das Hauptziel meines Projekts ist die Entwicklung und Implementierung eines umfassenden Besuchermanagementsystems, das den Verkauf von Eintrittskarten, die Erfassung von Besucherzahlen und die Überwachung der Auslastung des Schwimmbads ermöglicht. Dies soll die Effizienz und den Komfort für Besucher und Betreiber gleichermaßen verbessern.
 
 
 ## 2. Funktionen des Systems
