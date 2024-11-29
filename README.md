@@ -55,13 +55,13 @@ Ordner
 --------
 ```
 Dokumentation:
-Hier sind funktionalen Anforderungen enthalten.
+---
 
 Planungsdokumente:
 Hier ist der SQL-Code der Datenbank vorhanden.
 
 Implementierung:
-Hier wird der Papierprototyp, sowie ein ER-Diagramm der Datenbank gespeichert.
+Hier werden die Anforderungen, der Papierprototyp, sowie ein ER-Diagramm der Datenbank gespeichert.
 ```
 
 
