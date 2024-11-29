@@ -62,6 +62,9 @@ Hier ist der SQL-Code der Datenbank vorhanden.
 
 Implementierung:
 Hier werden die Anforderungen, der Papierprototyp, sowie ein ER-Diagramm der Datenbank gespeichert.
+
+Konsolen-Prototyp:
+Hier ist der C# Code für den Konsolen-Prototyp für das Besuchermanagment enthalten.
 ```
 
 
