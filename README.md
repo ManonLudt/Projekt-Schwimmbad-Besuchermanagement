@@ -29,9 +29,9 @@ Sensoren und Kameras: Diese Geräte überwachen die Besucherzahlen und übermitt
 
   
 ## 4. Vorteile des Systems
-*Effizienzsteigerung: Reduzierung von Warteschlangen und Verbesserung des Besuchererlebnisses durch schnellen und einfachen Zugang.
-*Bessere Planung: Echtzeit-Daten und Berichte ermöglichen eine bessere Planung und Optimierung des Schwimmbadbetriebs.
-*Sicherheit: Überwachung der Besucherzahlen hilft, Überfüllungen zu vermeiden und die Sicherheit der Besucher zu gewährleisten.
+* Effizienzsteigerung: Reduzierung von Warteschlangen und Verbesserung des Besuchererlebnisses durch schnellen und einfachen Zugang.
+* Bessere Planung: Echtzeit-Daten und Berichte ermöglichen eine bessere Planung und Optimierung des Schwimmbadbetriebs.
+* Sicherheit: Überwachung der Besucherzahlen hilft, Überfüllungen zu vermeiden und die Sicherheit der Besucher zu gewährleisten.
 
   
 ## 5. Implementierungsplan
