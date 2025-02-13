@@ -1,0 +1,69 @@
+IF DB_ID('Besuchermanagment') IS NULL
+    CREATE DATABASE Besuchermanagment;
+GO
+
+USE Besuchermanagment;
+GO
+
+IF OBJECT_ID('Besucher') IS NOT NULL
+    DROP TABLE Besucher;
+GO
+
+IF OBJECT_ID('Status') IS NOT NULL
+    DROP TABLE Status;
+GO
+
+IF OBJECT_ID('Karten') IS NOT NULL
+    DROP TABLE Karten;
+GO
+
+IF OBJECT_ID('Schwimmbad') IS NOT NULL
+    DROP TABLE Schwimmbad;
+GO
+
+IF OBJECT_ID('Reservierung') IS NOT NULL
+    DROP TABLE Reservierung;
+GO
+
+create table Besucher
+(
+	ID_Besucher int primary key IDENTITY(1,1),
+	Vorname varchar(100),
+	Nachname varchar(100),
+	AlterKunde int,
+	Status varchar(100)
+);
+
+create table Status
+(
+	ID_Status int primary key IDENTITY(1,1),
+	Bezeichnung varchar(100),
+	Rabatt decimal,
+	CONSTRAINT fk_besucher_status FOREIGN KEY(ID_Status) REFERENCES Besucher(ID_Besucher)
+);
+
+create table Schwimmbad
+(
+	ID_Schwimmbad int primary key identity(1,1),
+	Name varchar(100),
+	Straße varchar(100),
+	Ort varchar(100),
+	PLZ int,
+	Auslastung int,
+	CONSTRAINT fk_besucher_reservierung FOREIGN KEY(ID_Schwimmbad) REFERENCES Besucher(ID_Besucher),
+);
+
+create table Karten
+(
+	ID_Karten int primary key IDENTITY(1,1),
+	Bezeichnung varchar(100),
+	Anzahl int,
+	CONSTRAINT fk_schwimmbad_karten FOREIGN KEY(ID_Karten) REFERENCES Schwimmbad(ID_Schwimmbad)
+);
+
+create table Reservierung
+(
+	ID_Reservierung int primary key IDENTITY(1,1),
+	CONSTRAINT fk_besucher_reservierung FOREIGN KEY(ID_Reservierung) REFERENCES Besucher(ID_Besucher),
+	CONSTRAINT fk_karten_reservierung FOREIGN KEY(ID_Reservierung) REFERENCES Karten(ID_Karten),
+);
