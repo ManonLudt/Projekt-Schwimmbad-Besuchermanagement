@@ -1,0 +1,30 @@
+# Betriebssystem-spezifische Dateien
+.DS_Store
+Thumbs.db
+
+# IDEs und Editoren
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Build-Artefakte
+bin/
+dist/
+build/
+
+# Paketmanager
+node_modules/
+vendor/
+
+# Log-Dateien
+*.log
+
+# Umgebungsdateien
+.env
+*.env
+
+# Systemdateien
+*.bak
+*.swp
+*.swo
