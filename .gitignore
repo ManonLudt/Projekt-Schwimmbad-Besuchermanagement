@@ -10,6 +10,7 @@ Thumbs.db
 
 # Build-Artefakte
 bin/
+obj/
 dist/
 build/
 
