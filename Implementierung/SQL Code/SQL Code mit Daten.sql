@@ -62,11 +62,11 @@ create table Status
 
 create table StatusBesucher
 (
-    ID_Besucher INT,
-    ID_Status INT,
-    PRIMARY KEY (ID_Besucher, ID_Status),
-    FOREIGN KEY (ID_Besucher) REFERENCES Besucher(ID_Besucher),
-    FOREIGN KEY (ID_Status) REFERENCES Status(ID_Status)
+    	ID_Besucher INT,
+    	ID_Status INT,
+    	PRIMARY KEY (ID_Besucher, ID_Status),
+    	FOREIGN KEY (ID_Besucher) REFERENCES Besucher(ID_Besucher),
+    	FOREIGN KEY (ID_Status) REFERENCES Status(ID_Status)
 );
 
 create table Schwimmbad
@@ -81,11 +81,11 @@ create table Schwimmbad
 
 create table SchwimmbadBesucher
 (
-	ID_Besucher INT,
-    ID_Schwimmbad INT,
-    PRIMARY KEY (ID_Besucher, ID_Schwimmbad),
-    FOREIGN KEY (ID_Besucher) REFERENCES Besucher(ID_Besucher),
-    FOREIGN KEY (ID_Schwimmbad) REFERENCES Schwimmbad(ID_Schwimmbad)
+    	ID_Besucher INT,
+    	ID_Schwimmbad INT,
+   	PRIMARY KEY (ID_Besucher, ID_Schwimmbad),
+    	FOREIGN KEY (ID_Besucher) REFERENCES Besucher(ID_Besucher),
+    	FOREIGN KEY (ID_Schwimmbad) REFERENCES Schwimmbad(ID_Schwimmbad)
 );
 
 create table Karten
@@ -99,11 +99,16 @@ create table Karten
 create table Reservierung
 (
 	ID_Besucher INT,
-    ID_Karten INT,
-    PRIMARY KEY (ID_Besucher, ID_Karten),
-    FOREIGN KEY (ID_Besucher) REFERENCES Besucher(ID_Besucher),
-    FOREIGN KEY (ID_Karten) REFERENCES Karten(ID_Karten) 
+    	ID_Karten INT,
+    	PRIMARY KEY (ID_Besucher, ID_Karten),
+    	FOREIGN KEY (ID_Besucher) REFERENCES Besucher(ID_Besucher),
+    	FOREIGN KEY (ID_Karten) REFERENCES Karten(ID_Karten) 
 );
+
+SET IDENTITY_INSERT Benutzer ON;  
+INSERT INTO Benutzer(ID_Benutzer, Benutzername, Passwort) VALUES(1,'Admin', 12345)
+INSERT INTO Benutzer(ID_Benutzer, Benutzername, Passwort) VALUES(2,'Gast', 1234)
+SET IDENTITY_INSERT Benutzer OFF; 
 
 SET IDENTITY_INSERT Besucher ON;  
 INSERT INTO Besucher(ID_Besucher, Vorname, Nachname, AlterKunde) VALUES(1,'Lukas', 'Schneider', 17)
