@@ -23,5 +23,29 @@ namespace SchwimmbadProjekt_Besuchermanagment
         {
             InitializeComponent();
         }
+
+        private void ReservierungClick(object sender, RoutedEventArgs e)
+        {
+            //Main.Content = new ReservierungAusgabe();
+        }
+
+        private void KundeMenüClick(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new KundenAusgabe();
+        }
+
+        private void TicketMenüClick(object sender, RoutedEventArgs e)
+        {
+            //Main.Content = new TicketAusgabe();
+        }
+
+        private void BenutzerMenüClick(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void LogoutMenüClick(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

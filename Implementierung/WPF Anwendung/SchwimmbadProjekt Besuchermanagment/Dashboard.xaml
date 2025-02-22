@@ -5,8 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SchwimmbadProjekt_Besuchermanagment"
         mc:Ignorable="d"
-        Title="Dashboard" Height="450" Width="800">
+        Title="Dashboard" Height="460" Width="900" FontSize="18" FontFamily="Arial"  >
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.RowSpan="2" Background="#FF0F0C23">
+            <Label FontWeight="Bold" FontSize="24" Foreground="White">Menü</Label>
+            <Button Margin="0 70 0 0" Height="35" Click="DashboardMenüClick"
+                    Foreground="White"  
+                    Background="#FF0F0C23" 
+                    BorderBrush="#FF0F0C23" >Reservierung</Button>
+            <Button Height="35" Margin="0 15 0 0" Click="KundeMenüClick"
+                    Foreground="White"  
+                    Background="#FF0F0C23" 
+                    BorderBrush="#FF0F0C23">Kunden</Button>
+            <Button Height="35" Margin="0 15 0 0" Click="TicketMenüClick"
+                    Foreground="White"  
+                    Background="#FF0F0C23" 
+                    BorderBrush="#FF0F0C23">Tickets</Button>
+            <Button Height="35" Margin="0 15 0 0" 
+                    Foreground="White"  
+                    Background="#FF0F0C23" 
+                    BorderBrush="#FF0F0C23">Benutzer</Button>
+
+            <Button Height="35"  Margin="0 100 0 0" Width="120" HorizontalContentAlignment="Left" Click="LogoutMenüClick"
+                    Foreground="White"  
+                    Background="#FF0F0C23" 
+                    BorderBrush="#FF0F0C23">Logout</Button>
+        </StackPanel>
+
+        <Frame x:Name="Main" Grid.RowSpan="2" Grid.Column="1" Source="ReservierungAusgabe.xaml"></Frame>
+
     </Grid>
 </Window>

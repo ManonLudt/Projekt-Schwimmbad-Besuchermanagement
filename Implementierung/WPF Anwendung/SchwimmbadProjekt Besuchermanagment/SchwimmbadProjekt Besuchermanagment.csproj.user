@@ -10,6 +10,18 @@
     <Compile Update="Dashboard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="KundenAnlegen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="KundenAusgaben.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="KundenLöschen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="KundenÄndern.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="PasswortÄndern.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,6 +31,18 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Dashboard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="KundenAnlegen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="KundenAusgaben.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="KundenLöschen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="KundenÄndern.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
