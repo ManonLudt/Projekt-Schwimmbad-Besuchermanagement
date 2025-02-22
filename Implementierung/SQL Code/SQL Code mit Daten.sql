@@ -25,7 +25,9 @@ create table Benutzer
 (
 	ID_Benutzer int primary key IDENTITY(1,1),
 	Benutzername varchar(100),
-	Passwort int
+	Passwort int,
+	EMail varchar(100),
+	Telefon varchar(100)
 );
 
 create table Besucher
@@ -64,8 +66,8 @@ create table Reservierung
 );
 
 SET IDENTITY_INSERT Benutzer ON;
-INSERT INTO Benutzer(ID_Benutzer, Benutzername, Passwort) VALUES(1,'Admin', 12345)
-INSERT INTO Benutzer(ID_Benutzer, Benutzername, Passwort) VALUES(2,'Gast', 1234)
+INSERT INTO Benutzer(ID_Benutzer, Benutzername, Passwort, EMail, Telefon) VALUES(1,'Admin', 12345, '', '')
+INSERT INTO Benutzer(ID_Benutzer, Benutzername, Passwort, EMail, Telefon) VALUES(2,'Gast', 1234, '', '')
 SET IDENTITY_INSERT Benutzer OFF;
 
 SET IDENTITY_INSERT Besucher ON;
