@@ -36,7 +36,7 @@ namespace SchwimmbadProjekt_Besuchermanagment
 
         private void TicketMenüClick(object sender, RoutedEventArgs e)
         {
-            //Main.Content = new TicketAusgabe();
+            Main.Content = new TicketAusgabe();
         }
 
         private void BenutzerMenüClick(object sender, RoutedEventArgs e)

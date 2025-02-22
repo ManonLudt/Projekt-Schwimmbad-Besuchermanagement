@@ -28,6 +28,18 @@
     <Compile Update="Registrierung.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="TicketAnlegen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TicketAusgabe.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TicketLöschen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TicketÄndern.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Dashboard.xaml">
@@ -52,6 +64,18 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Registrierung.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TicketAnlegen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TicketAusgabe.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TicketLöschen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TicketÄndern.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
