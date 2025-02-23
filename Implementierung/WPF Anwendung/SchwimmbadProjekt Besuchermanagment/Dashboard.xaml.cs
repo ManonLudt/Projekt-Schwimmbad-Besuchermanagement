@@ -26,7 +26,7 @@ namespace SchwimmbadProjekt_Besuchermanagment
 
         private void ReservierungClick(object sender, RoutedEventArgs e)
         {
-            //Main.Content = new ReservierungAusgabe();
+            Main.Content = new ReservierungAusgabe();
         }
 
         private void KundeMenüClick(object sender, RoutedEventArgs e)

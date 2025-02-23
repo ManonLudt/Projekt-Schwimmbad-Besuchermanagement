@@ -28,6 +28,18 @@
     <Compile Update="Registrierung.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ReservierungAnlegen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ReservierungAusgabe.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ReservierungLöschen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ReservierungÄndern.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="TicketAnlegen.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -64,6 +76,18 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Registrierung.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ReservierungAnlegen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ReservierungAusgabe.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ReservierungLöschen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ReservierungÄndern.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="TicketAnlegen.xaml">
