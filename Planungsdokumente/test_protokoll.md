@@ -1,7 +1,7 @@
 Testfälle
 =====
 
-### ID: 	T01
+## ID: 	T01
 Beschreibung: 	Benutzer anlegen
 Vorbedingung: 	Das Programm ist im Registrierungsdialog
 Test-Schritte: 	
@@ -15,7 +15,7 @@ Das Benutzerkonto wir in der Datenbank anlegt und der Benutzer kann sich anmelde
 Dies wird im Menü “Passwort vergessen?” überprüft.
 
 
-### ID: 	T02
+## ID: 	T02
 Beschreibung: 	Reservierung anlegen
 Vorbedingung: 	Das Programm ist im Dashboard bei dem Punkt Reservierung
 Test-Schritte: 	
