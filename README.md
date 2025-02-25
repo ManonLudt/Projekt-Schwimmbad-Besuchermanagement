@@ -109,6 +109,8 @@ Zudem sieht er alle anwesenden und abwesenden Kunden, sowie sie Gesamtanzahl.
 ![image alt](https://github.com/ManonLudt/Projekt-Schwimmbad-Besuchermanagement/blob/9f218cb20c850d10ff40d651ba9c835358de95ce/Screenshots/Screenshot%202025-02-25%20152426.png)
 ![image alt](https://github.com/ManonLudt/Projekt-Schwimmbad-Besuchermanagement/blob/2e696fcedcfdb961e4df19191e806cd5d57ad421/Screenshots/Screenshot%202025-02-25%20152437.png)
 
+
+
 Schnittstelle | Code
 ------------- | -------------
 Microsoft SQL Server Managment Studio | SQL-Code
