@@ -33,18 +33,73 @@ Sensoren und Kameras: Diese Geräte überwachen die Besucherzahlen und übermitt
 * Bessere Planung: Echtzeit-Daten und Berichte ermöglichen eine bessere Planung und Optimierung des Schwimmbadbetriebs.
 * Sicherheit: Überwachung der Besucherzahlen hilft, Überfüllungen zu vermeiden und die Sicherheit der Besucher zu gewährleisten.
 
-  
-## 5. Implementierungsplan
-* Phase 1: Anforderungsanalyse und Planung
-Ermittlung der genauen Anforderungen und Erstellung eines detaillierten Projektplans.
-* Phase 2: Entwicklung und Test
-Entwicklung der Software und Integration der Hardware-Komponenten. Durchführung umfangreicher Tests, um die Funktionalität und Zuverlässigkeit des Systems sicherzustellen.
-* Phase 3: Implementierung und Schulung
-Installation des Systems im Schwimmbad und Schulung des Personals im Umgang mit dem neuen System.
-* Phase 4: Betrieb und Wartung
-Regelmäßige Wartung und Updates des Systems, um eine reibungslose Funktion zu gewährleisten.
-Dieses Besuchermanagementsystem wird dazu beitragen, den Betrieb des Schwimmbads effizienter zu gestalten und den Besuchern ein besseres Erlebnis zu bieten.
-    
+# Anwendung des Programms
+
+## Login-Vorgang
+Der Benutzer kann sich durch Eingabe seines Benutzernamens und Passworts in das System einloggen.
+Sollte der Benutzer noch kein Konto besitzen, kann er über das Menüfeld _Registrieren_ ein neues Benutzerprofil anlegen.
+Unter dem Menüfeld _Passwort vergessen?_ kann er ein neues Passwort vergesben.
+
+## Ticketverwaltung
+Befindet der Benutzer sich im Dashboard, so kann er über den Menüpunkt _Ticket_ Tickets verwalten.
+
+**Anlegen:** Hier kann der Benutzer ein neues Ticket anlegen, indem er eine neue TicketID, eine Bezeichnung, einen Preis und die verfügbare Anzahl angibt.
+             Jedes Feld muss dabei ausgefüllt sein, um das Erstellen zu gewährleisten.
+             Zudem müssen in den Feldern TicketID, Preis und Anzahl ein INT-Wert eingegeben werden.
+             Nach dem anlegen, wird das Ticket im Dashboard ausgegeben.
+
+**Ändern:** Hier kann er Benutzer ein bereits existierendes Ticket anpassen, indem er die entsprechende TicketID angibt.
+            Er kann eine neue Bezeichnung, Preis oder Anzahl vergeben.
+            Abgesehen von der TicketID, müssen nur die Felder ausgefüll werden, die angepasst werden sollen.
+            Zudem müssen in den Feldern TicketID, Preis und Anzahl ein INT-Wert weiterhin eingegeben werden, um eine Änderung durchzuführen.
+            Nach dem ändern, werden die Ticketinformation im Dashboard ausgegeben.
+
+**Löschen:** Bei diesem Punkt kann der Benutzer ein bereits existierendes Ticket löschen, indem er die entsprechende TicketID angibt.
+             Es muss nur beachtet werden, das kein String-Wert in der TicketID eingegeben wird.
+             Nach der Löschung wird das Ticket nicht mehr im Dashboard ausgegeben.
+
+## Kundenverwaltung
+Befindet der Benutzer sich im Dashboard, so kann er über den Menüpunkt _Kunden_ Kunden verwalten.
+
+**Anlegen:** Hier kann der Benutzer einen neuen Kunden anlegen, indem er eine neue KundenID, den Vor- und Nachnamen, das Alter und den Status über eine Checkbox
+             auswählt.
+             Dabei ist der Status _keinen_ als Standart ausgewählt, welcher nicht im Dashboard angezeigt wird.
+             Jedes Feld muss dabei ausgefüllt sein, um das Erstellen zu gewährleisten.
+             Zudem müssen in den Feldern KundenID und Alter INT-Wert eingegeben werden.
+             Nach dem anlegen, wird der Kunde im Dashboard ausgegeben.
+
+**Ändern:** Hier kann er Benutzer einen bereits existierenden Kunden anpassen, indem er die entsprechende KundenID angibt.
+            Er kann einen Vor und Nachnamen, das Alter oder den Status vergeben.
+            Abgesehen von der KundenID, müssen nur die Felder ausgefüllt werden, die angepasst werden sollen.
+            Wird kein Status ausgewählt, wird die Standartauswahlr _keiner_ ausgewählt.
+            Zudem müssen in den Feldern KundenID und Alter ein INT-Wert weiterhin eingegeben werden, um eine Änderung durchzuführen.
+            Nach dem ändern, werden die Kundeninformation im Dashboard ausgegeben.
+
+**Löschen:** Bei diesem Punkt kann der Benutzer einen bereits existierenden Kunden löschen, indem er die entsprechende KundenID angibt.
+             Es muss nur beachtet werden, das kein String-Wert in der KundenID eingegeben wird.
+             Nach der Löschung wird der Kunde nicht mehr im Dashboard ausgegeben.
+
+## Reservierungverwaltung
+Befindet der Benutzer sich im Dashboard, so kann er über den Menüpunkt _Reservierung_ Reservierungen verwalten.
+Zudem sieht er alle anwesenden und abwesenden Kunden, sowie sie Gesamtanzahl.
+
+**Anlegen:** Hier kann der Benutzer eine neue Reservierung anlegen, indem er eine ReservierungID vergibt und die ID eines existierenden 
+             Kunden und Tickets angibt.
+             Dabei wird die Anwesenheit des Kunden standartmäßig auf Abwesend gesetzt und uss im nachinein angepasst werden.
+             Jedes Feld muss dabei ausgefüllt sein, um das Erstellen zu gewährleisten.
+             Zudem müssen in allen Feldern ein INT-Wert eingegeben werden.
+             Nach dem anlegen, wird die Reservierung im Dashboard ausgegeben.
+
+**Ändern:** Hier kann er Benutzer eine bereits existierende Reservierung anpassen, indem er die entsprechende ReservierungID angibt.
+            Er kann den Kunden oder das Tiket mit der entsprechenden  ID anpassen.
+            Auch hier müssen alle Felder ausgefüllt werden um eine Änderung durchzuführen.
+            Zudem müssen weiterhin in alle Feldern INT-Werte eingegeben werden.
+            Nach dem ändern, werden die Reservierungsinformation im Dashboard ausgegeben.
+
+**Löschen:** Bei diesem Punkt kann der Benutzer ein bereits existierende Reservierung löschen, indem er die entsprechende ReservierungID angibt.
+             Es muss nur beachtet werden, das kein String-Wert in der ReservierungID eingegeben wird.
+             Nach der Löschung wird die Reservierung nicht mehr im Dashboard ausgegeben.
+
 Schnittstelle | Code
 ------------- | -------------
 Microsoft SQL Server Managment Studio | SQL-Code
