@@ -11,8 +11,8 @@ Das beobachtete Resultat hat nur teilweise mit dem erwarteten Resultat übereins
 wurde, wenn keine Daten angegeben wurden. 
 Dieser Fehler wurde jedoch behoben, indem nun in jedem Feld eine Eingabe getätigt werden muss, um eine Regestrierung des
 Benutzers zuzulassen.
-
-
+  
+  
 ### Durchgeführter Test: T02  
 **Datum:** 25.02.2025  
 **Tester:** Manon Ludt  
