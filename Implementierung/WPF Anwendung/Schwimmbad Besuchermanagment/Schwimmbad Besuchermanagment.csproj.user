@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Dashboard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DashboardAusgabe.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="KundeAnlegen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="KundeLöschen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="KundenAusgabe.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="KundenÄndern.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PasswortÄndern.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Registrierung.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ReservierungAnlegen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ReservierungLöschen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ReservierungÄndern.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TicketAnlegen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TicketAusgabe.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TicketLöschen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TicketÄndern.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Dashboard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DashboardAusgabe.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="KundeAnlegen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="KundeLöschen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="KundenAusgabe.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="KundenÄndern.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Registrierung.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ReservierungAnlegen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ReservierungLöschen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ReservierungÄndern.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TicketAnlegen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TicketAusgabe.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TicketLöschen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TicketÄndern.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
