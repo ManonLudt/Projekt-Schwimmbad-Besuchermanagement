@@ -69,7 +69,7 @@ namespace Schwimmbad_Besuchermanagment
             string status = "";
             if (chkKeinen.IsChecked == true)
             {
-                status = "Keinen";
+                status = " ";
             }
             else if (chkSchueler.IsChecked == true)
             {
