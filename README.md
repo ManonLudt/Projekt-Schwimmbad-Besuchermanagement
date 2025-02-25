@@ -106,6 +106,8 @@ Zudem sieht er alle anwesenden und abwesenden Kunden, sowie sie Gesamtanzahl.
              Es muss nur beachtet werden, das kein String-Wert in der ReservierungID eingegeben wird.
              Nach der Löschung wird die Reservierung nicht mehr im Dashboard ausgegeben.
 
+![image alt](https://github.com/ManonLudt/Projekt-Schwimmbad-Besuchermanagement/blob/9f218cb20c850d10ff40d651ba9c835358de95ce/Screenshots/Screenshot%202025-02-25%20152426.png)
+
 Schnittstelle | Code
 ------------- | -------------
 Microsoft SQL Server Managment Studio | SQL-Code
