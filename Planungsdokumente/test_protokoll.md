@@ -13,13 +13,13 @@ Dieser Fehler wurde jedoch behoben, indem nun in jedem Feld eine Eingabe getäti
 Benutzers zuzulassen.
 
 
-### Durchgeführter Test: T02
-**Datum:** 25.02.2025
-**Tester:** Manon Ludt
-**Beobachtetes Resultat:** 
+### Durchgeführter Test: T02  
+**Datum:** 25.02.2025  
+**Tester:** Manon Ludt  
+**Beobachtetes Resultat:**   
 Die Reservierung wurde erfolgreich angelegt, indem eine gültige ReservierungsID, KundenID und TicketID eingegeben wurde.
-Zudem ist es nun möglich diese zu löschen oder anzupassen.
-**Testergebnis:** 
+Zudem ist es nun möglich diese zu löschen oder anzupassen.  
+**Testergebnis:**   
 Das beobachtete Resultat hat nur teilweise mit dem erwarteten Resultat übereinstimmt, da Fehler noch vorhanden waren.
 Es war möglich das Programm durch unerwartete eingaben in Form eines Strings zum Absturz zu bringen.
 Dieser Fehler wurde jedoch behoben, indem String-Eingaben verweigert werden.
