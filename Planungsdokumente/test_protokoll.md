@@ -1,12 +1,12 @@
 Testprotokolle
 =====
 
-### Durchgeführter Test: T01
-**Datum:** 25.02.2025
-**Tester:** Manon Ludt
-**Beobachtetes Resultat:**
-Der Benutzername 'Test' und das Passwort '1234' wurden in der Datenbank erfolgreich angelegt und ein Anmelden war dadurch möglich.
-**Testergebnis:** 
+### Durchgeführter Test: T01  
+**Datum:** 25.02.2025  
+**Tester:** Manon Ludt  
+**Beobachtetes Resultat:**  
+Der Benutzername 'Test' und das Passwort '1234' wurden in der Datenbank erfolgreich angelegt und ein Anmelden war dadurch möglich.  
+**Testergebnis:**   
 Das beobachtete Resultat hat nur teilweise mit dem erwarteten Resultat übereinstimmt, da ein Benutzer auch dann angelegt 
 wurde, wenn keine Daten angegeben wurden. 
 Dieser Fehler wurde jedoch behoben, indem nun in jedem Feld eine Eingabe getätigt werden muss, um eine Regestrierung des
