@@ -59,6 +59,7 @@ Befindet der Benutzer sich im Dashboard, so kann er über den Menüpunkt _Ticket
              Nach der Löschung wird das Ticket nicht mehr im Dashboard ausgegeben.
 
 ![image alt](https://github.com/ManonLudt/Projekt-Schwimmbad-Besuchermanagement/blob/9aa46e36012018e8302d4c2f3b5ba2e9331b39da/Screenshots/Screenshot%202025-02-25%20151924.png)
+![image alt](https://github.com/ManonLudt/Projekt-Schwimmbad-Besuchermanagement/blob/363038ec3d191d84a536501d8a9603e7a739a06e/Screenshots/Screenshot%202025-02-25%20151938.png)
 
 ## Kundenverwaltung
 Befindet der Benutzer sich im Dashboard, so kann er über den Menüpunkt _Kunden_ Kunden verwalten.
