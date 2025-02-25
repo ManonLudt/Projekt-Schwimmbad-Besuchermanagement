@@ -10,7 +10,7 @@ Test-Schritte:
 3. Es wird auf den Button "anlegen" geklickt.
 4. Die Regestrierung wird durchgeführt.
    
-#### Erwartetes Resultat: 	
+**Erwartetes Resultat:**   	
 Das Benutzerkonto wir in der Datenbank anlegt und der Benutzer kann sich anmelden oder zum Beispiel seine Nutzerdaten ändern.
 Dies wird im Menü “Passwort vergessen?” überprüft.
 
@@ -24,7 +24,7 @@ Test-Schritte:
 3. Es wird auf den Button "anlegen" geklickt.
 4. Die Reservierung wird durchgeführt.
      
-#### Erwartetes Resultat: 	
+**Erwartetes Resultat:**   	
 Die Reservierung wird in der Datenbank hinzugefügt und kann nun geändert oder gelöscht werden.
 Zudem reduziert sich die Anzahl des reservierten Tickets um 1 und die Anzahl der abwesenden Kunden erhöht sich um 1.
 
