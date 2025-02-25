@@ -58,6 +58,8 @@ Befindet der Benutzer sich im Dashboard, so kann er über den Menüpunkt _Ticket
              Es muss nur beachtet werden, das kein String-Wert in der TicketID eingegeben wird.
              Nach der Löschung wird das Ticket nicht mehr im Dashboard ausgegeben.
 
+![image alt](https://github.com/ManonLudt/Projekt-Schwimmbad-Besuchermanagement/blob/9aa46e36012018e8302d4c2f3b5ba2e9331b39da/Screenshots/Screenshot%202025-02-25%20151924.png)
+
 ## Kundenverwaltung
 Befindet der Benutzer sich im Dashboard, so kann er über den Menüpunkt _Kunden_ Kunden verwalten.
 
