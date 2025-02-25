@@ -81,7 +81,9 @@ Befindet der Benutzer sich im Dashboard, so kann er über den Menüpunkt _Kunden
 **Löschen:** Bei diesem Punkt kann der Benutzer einen bereits existierenden Kunden löschen, indem er die entsprechende KundenID angibt.
              Es muss nur beachtet werden, das kein String-Wert in der KundenID eingegeben wird.
              Nach der Löschung wird der Kunde nicht mehr im Dashboard ausgegeben.
+             
 ![image alt](https://github.com/ManonLudt/Projekt-Schwimmbad-Besuchermanagement/blob/f561df57d50e625b78889702bf5a4b4e04a1cb8c/Screenshots/Screenshot%202025-02-25%20152401.png)
+![image alt](https://github.com/ManonLudt/Projekt-Schwimmbad-Besuchermanagement/blob/f72fa504ff58aa7c9bd2e109f913e44f50f555a0/Screenshots/Screenshot%202025-02-25%20152411.png)
 
 ## Reservierungverwaltung
 Befindet der Benutzer sich im Dashboard, so kann er über den Menüpunkt _Reservierung_ Reservierungen verwalten.
