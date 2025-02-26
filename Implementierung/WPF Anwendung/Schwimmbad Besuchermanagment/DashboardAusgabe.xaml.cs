@@ -47,8 +47,8 @@ namespace Schwimmbad_Besuchermanagment
             // Verbindung zur Datenbank aufbauen
             SqlConnectionStringBuilder sqlSb = new SqlConnectionStringBuilder
             {
-                DataSource = @"(LocalDb)\MSSQLLocalDB", // Verbindungsstring anpassen
-                InitialCatalog = "BesuchermanagmentDatenbank", // Datenbankname anpassen
+                DataSource = @"(LocalDb)\MSSQLLocalDB", 
+                InitialCatalog = "BesuchermanagmentDatenbank", 
                 IntegratedSecurity = true,
                 MultipleActiveResultSets = true
             };
@@ -60,15 +60,12 @@ namespace Schwimmbad_Besuchermanagment
                 {
                     con.Open();
 
-                    // SQL-Anweisung, um die Anzahl der Reservierungen zu zählen
                     string query = "SELECT COUNT(*) FROM Reservierung";
 
                     using (SqlCommand command = new SqlCommand(query, con))
                     {
-                        // Die Anzahl der Einträge aus der Tabelle "Reservierung" ermitteln
                         int anzahlReservierungen = (int)command.ExecuteScalar();
 
-                        // Den Wert in der TextBox "Gesamt" anzeigen
                         Gesamt.Text = anzahlReservierungen.ToString();
                     }
                 }
@@ -84,8 +81,8 @@ namespace Schwimmbad_Besuchermanagment
             // Verbindung zur Datenbank aufbauen
             SqlConnectionStringBuilder sqlSb = new SqlConnectionStringBuilder
             {
-                DataSource = @"(LocalDb)\MSSQLLocalDB", // Verbindungsstring anpassen
-                InitialCatalog = "BesuchermanagmentDatenbank", // Datenbankname anpassen
+                DataSource = @"(LocalDb)\MSSQLLocalDB", 
+                InitialCatalog = "BesuchermanagmentDatenbank",
                 IntegratedSecurity = true,
                 MultipleActiveResultSets = true
             };
@@ -97,12 +94,10 @@ namespace Schwimmbad_Besuchermanagment
                 {
                     con.Open();
 
-                    // SQL-Anweisung, um die Anzahl der Reservierungen zu zählen, bei denen Anwesend = 1 ist
                     string query = "SELECT COUNT(*) FROM Reservierung WHERE Anwesend = 1";
 
                     using (SqlCommand command = new SqlCommand(query, con))
                     {
-                        // Die Anzahl der Einträge aus der Tabelle "Reservierung" ermitteln, bei denen Anwesend = 1
                         int anzahlAnwesende = (int)command.ExecuteScalar();
 
                         // Den Wert in der TextBox "Gesamt" anzeigen
@@ -121,8 +116,8 @@ namespace Schwimmbad_Besuchermanagment
             // Verbindung zur Datenbank aufbauen
             SqlConnectionStringBuilder sqlSb = new SqlConnectionStringBuilder
             {
-                DataSource = @"(LocalDb)\MSSQLLocalDB", // Verbindungsstring anpassen
-                InitialCatalog = "BesuchermanagmentDatenbank", // Datenbankname anpassen
+                DataSource = @"(LocalDb)\MSSQLLocalDB",
+                InitialCatalog = "BesuchermanagmentDatenbank",
                 IntegratedSecurity = true,
                 MultipleActiveResultSets = true
             };
@@ -134,15 +129,12 @@ namespace Schwimmbad_Besuchermanagment
                 {
                     con.Open();
 
-                    // SQL-Anweisung, um die Anzahl der Reservierungen zu zählen, bei denen Anwesend = 1 ist
                     string query = "SELECT COUNT(*) FROM Reservierung WHERE Anwesend = 0";
 
                     using (SqlCommand command = new SqlCommand(query, con))
                     {
-                        // Die Anzahl der Einträge aus der Tabelle "Reservierung" ermitteln, bei denen Anwesend = 1
                         int anzahlAbwesende = (int)command.ExecuteScalar();
 
-                        // Den Wert in der TextBox "Gesamt" anzeigen
                         Abwesend.Text = anzahlAbwesende.ToString();
                     }
                 }

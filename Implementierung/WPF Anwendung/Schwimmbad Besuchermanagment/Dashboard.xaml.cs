@@ -24,6 +24,7 @@ namespace Schwimmbad_Besuchermanagment
             InitializeComponent();
         }
 
+        //click-Events
         private void DashboardMenüClick(object sender, RoutedEventArgs e)
         {
             Main.Content = new DashboardAusgabe();

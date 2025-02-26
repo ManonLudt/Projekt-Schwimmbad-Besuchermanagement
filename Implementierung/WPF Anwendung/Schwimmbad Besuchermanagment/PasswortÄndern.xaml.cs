@@ -27,14 +27,14 @@ namespace Schwimmbad_Besuchermanagment
 
         private void PasswortÄndernClick(object sender, RoutedEventArgs e)
         {
-            string benutzername = txtBenutzername.Text; // Benutzername aus der Textbox
-            string Passwort = pwdPasswort.Password; // Neues Passwort aus der PasswordBox
+            string benutzername = txtBenutzername.Text; 
+            string Passwort = pwdPasswort.Password; 
             string PasswortAgain = pwdPasswortAgain.Password;
 
-            if (string.IsNullOrEmpty(benutzername) || string.IsNullOrEmpty(Passwort))
+            if (string.IsNullOrEmpty(benutzername) || string.IsNullOrEmpty(Passwort) || string.IsNullOrEmpty(PasswortAgain))
             {
-                MessageBox.Show("Bitte Benutzername und Passwort eingeben.");
-                return;
+                MessageBox.Show("Bitte füllen Sie alle Felder aus.");
+                return; 
             }
 
             else if (Passwort == PasswortAgain)
@@ -55,16 +55,13 @@ namespace Schwimmbad_Besuchermanagment
                     {
                         con.Open();
 
-                        // SQL-Abfrage, um das Passwort für den Benutzer zu aktualisieren
                         string sqlUpdatePasswort = "UPDATE Benutzer SET Passwort = @password WHERE Benutzername = @username";
 
                         using (SqlCommand command = new SqlCommand(sqlUpdatePasswort, con))
                         {
-                            // Parameter für den SQL-Befehl hinzufügen
                             command.Parameters.AddWithValue("@username", benutzername);
                             command.Parameters.AddWithValue("@password", Passwort);
 
-                            // Befehl ausführen, um das Passwort zu ändern
                             int rowsAffected = command.ExecuteNonQuery();
 
                             if (rowsAffected > 0)
@@ -80,12 +77,12 @@ namespace Schwimmbad_Besuchermanagment
                     }
                     catch (Exception ex)
                     {
-                        // Fehlerbehandlung
                         MessageBox.Show("Fehler: " + ex.Message, "Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                 }
             }
 
+            //Passwörter stimmen nicht überein
             else
             {
                 pwdPasswort.BorderBrush = Brushes.Red;

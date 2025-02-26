@@ -27,20 +27,20 @@ namespace Schwimmbad_Besuchermanagment
 
         private void KundeAnlegen_Click(object sender, RoutedEventArgs e)
         {
-            // Eingabewerte aus den Textboxen holen
+            // ID wird überprüft
             int? idBesucher = null;
             if (!string.IsNullOrEmpty(txtKundeID.Text))
             {
                 if (!int.TryParse(txtKundeID.Text, out int tempID))
                 {
                     MessageBox.Show("Ungültige KundenID!");
-                    return;  // Rückgabe, falls ID ungültig
+                    return;  
                 }
 
                 if (tempID == 0)
                 {
                     MessageBox.Show("Die KundenID darf nicht 0 sein!");
-                    return;  // Rückgabe, falls ID ungültig
+                    return;  
                 }
                 idBesucher = tempID;
             }
@@ -48,19 +48,20 @@ namespace Schwimmbad_Besuchermanagment
             string vorname = txtKundenVorname.Text;
             string nachname = txtKundenNachname.Text;
 
+            //Alter wird überprüft
             int? alterKunde = null;
             if (!string.IsNullOrEmpty(txtKundenalter.Text))
             {
                 if (!int.TryParse(txtKundenalter.Text, out int tempAlter))
                 {
                     MessageBox.Show("Ungültiges Alter!");
-                    return;  // Rückgabe, falls Alter ungültig
+                    return; 
                 }
 
                 if (tempAlter <= 9)
                 {
                     MessageBox.Show("Alter muss größer als 9 sein");
-                    return;  // Rückgabe, falls Alter ungültig
+                    return;  
                 }
                 alterKunde = tempAlter;
             }
@@ -84,7 +85,7 @@ namespace Schwimmbad_Besuchermanagment
             if (string.IsNullOrEmpty(vorname) || string.IsNullOrEmpty(nachname) || alterKunde == null || string.IsNullOrEmpty(status))
             {
                 MessageBox.Show("Bitte füllen Sie alle Felder aus!");
-                return;  // Frühzeitiger Rückgabepunkt bei Fehler
+                return; 
             }
 
             // Überprüfen, ob die KundenID 0 ist
@@ -94,6 +95,7 @@ namespace Schwimmbad_Besuchermanagment
                 return;
             }
 
+            // Verbindung zur Datenbank aufbauen
             SqlConnectionStringBuilder sqlSb = new SqlConnectionStringBuilder
             {
                 DataSource = @"(LocalDb)\MSSQLLocalDB",
@@ -120,14 +122,12 @@ namespace Schwimmbad_Besuchermanagment
 
                     using (SqlCommand command = new SqlCommand(query, con))
                     {
-                        // Parameter für die SQL-Anweisung hinzufügen
                         command.Parameters.AddWithValue("@IdBesucher", (object)idBesucher ?? DBNull.Value);
                         command.Parameters.AddWithValue("@Vorname", vorname);
                         command.Parameters.AddWithValue("@Nachname", nachname);
                         command.Parameters.AddWithValue("@Alter", (object)alterKunde ?? DBNull.Value);
                         command.Parameters.AddWithValue("@Status", status);
 
-                        // Ausführen der SQL-Anweisung
                         int result = command.ExecuteNonQuery();
 
                         // Prüfen, ob die Einfügung erfolgreich war

@@ -27,7 +27,7 @@ namespace Schwimmbad_Besuchermanagment
 
         private void TicketLöschen_Click(object sender, RoutedEventArgs e)
         {
-            // Überprüfen, ob die TicketID leer ist oder ein ungültiger Wert (0 oder String) eingegeben wurde
+            // Überprüft TicketID
             if (string.IsNullOrEmpty(txtTicketID.Text))
             {
                 MessageBox.Show("Bitte eine TicketID eingeben!");
@@ -37,15 +37,16 @@ namespace Schwimmbad_Besuchermanagment
             if (!int.TryParse(txtTicketID.Text, out int idTicket))
             {
                 MessageBox.Show("Ungültige TicketID!");
-                return;  // Rückgabe, falls ID ungültig
+                return; 
             }
 
             if(idTicket == 0)
             {
                 MessageBox.Show("Die TicketID darf nicht 0 sein!");
-                return;  // Rückgabe, falls ID ungültig
+                return; 
             }
 
+            // Verbindung zur Datenbank aufbauen
             SqlConnectionStringBuilder sqlSb = new SqlConnectionStringBuilder
             {
                 DataSource = @"(LocalDb)\MSSQLLocalDB",
@@ -61,18 +62,14 @@ namespace Schwimmbad_Besuchermanagment
                 {
                     con.Open();
 
-                    // SQL-Anweisung zum Löschen des Tickets
                     string query = "DELETE FROM Ticket WHERE Id_Ticket = @IdTicket";
 
                     using (SqlCommand command = new SqlCommand(query, con))
                     {
-                        // Parameter für die SQL-Anweisung hinzufügen
                         command.Parameters.AddWithValue("@IdTicket", idTicket);
 
-                        // Ausführen der SQL-Anweisung
                         int result = command.ExecuteNonQuery();
 
-                        // Prüfen, ob das Ticket erfolgreich gelöscht wurde
                         if (result > 0)
                         {
                             MessageBox.Show("Ticket erfolgreich gelöscht!");

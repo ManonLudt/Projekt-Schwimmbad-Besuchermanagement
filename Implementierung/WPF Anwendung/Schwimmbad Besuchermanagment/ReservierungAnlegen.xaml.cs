@@ -66,7 +66,7 @@ namespace Schwimmbad_Besuchermanagment
                 return;
             }
 
-
+            // Verbindung zur Datenbank aufbauen
             SqlConnectionStringBuilder sqlSb = new SqlConnectionStringBuilder
             {
                 DataSource = @"(LocalDb)\MSSQLLocalDB",
@@ -78,7 +78,6 @@ namespace Schwimmbad_Besuchermanagment
             // SQL-Verbindung verwenden
             try
             {
-                // SQL-Verbindung öffnen
                 using (SqlConnection con = new SqlConnection(sqlSb.ConnectionString))
                 {
                     con.Open();
@@ -89,7 +88,6 @@ namespace Schwimmbad_Besuchermanagment
                         setIdentityCommand.ExecuteNonQuery();
                     }
 
-                    // Hole die Kundendaten
                     string queryKunde = "SELECT * FROM Besucher WHERE ID_Besucher = @KundenID";
                     SqlCommand cmdKunde = new SqlCommand(queryKunde, con);
                     cmdKunde.Parameters.AddWithValue("@KundenID", kundenID);
@@ -106,7 +104,6 @@ namespace Schwimmbad_Besuchermanagment
                     string status = readerKunde["Status"].ToString();
                     readerKunde.Close();
 
-                    // Hole die Ticketdaten
                     string queryTicket = "SELECT * FROM Ticket WHERE ID_Ticket = @TicketID";
                     SqlCommand cmdTicket = new SqlCommand(queryTicket, con);
                     cmdTicket.Parameters.AddWithValue("@TicketID", ticketID);
@@ -121,7 +118,7 @@ namespace Schwimmbad_Besuchermanagment
                     string ticketBezeichnung = readerTicket["Bezeichnung"].ToString();
                     readerTicket.Close();
 
-                    // Berechne den Rabatt basierend auf dem Kundenstatus
+                    //Rabatte für Status
                     int rabatt = 0;
                     if (status == "Schüler")
                     {
@@ -132,7 +129,6 @@ namespace Schwimmbad_Besuchermanagment
                         rabatt = 5;
                     }
 
-                    // Erstelle die SQL-Anweisung zum Einfügen der neuen Reservierung
                     string insertQuery = "INSERT INTO Reservierung (ID_Reservierung, Vorname, Nachname, Status, Ticket, Rabatt, Anwesend) " +
                                          "VALUES (@ID_Reservierung, @Vorname, @Nachname, @Status, @Ticket, @Rabatt, 0)"; // Anwesend bleibt null
 
@@ -144,7 +140,6 @@ namespace Schwimmbad_Besuchermanagment
                     cmdInsert.Parameters.AddWithValue("@Ticket", ticketBezeichnung);
                     cmdInsert.Parameters.AddWithValue("@Rabatt", rabatt);
 
-                    // Führe das Insert aus
                     cmdInsert.ExecuteNonQuery();
 
                     MessageBox.Show("Die Reservierung wurde erfolgreich erstellt!");

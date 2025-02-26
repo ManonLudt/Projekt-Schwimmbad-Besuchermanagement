@@ -23,22 +23,20 @@ namespace Schwimmbad_Besuchermanagment
     /// </summary>
     public partial class KundenAusgabe : Page
     {
-        // Der Kontext wird als Klassenvariable angelegt, damit alle Methoden auf denselben Kontext zugreifen können.
         private BesuchermanagmentDatenbankContext _context = new BesuchermanagmentDatenbankContext();
 
-        //private ListCollectionView DisplayView;
         private ICollectionView DisplayView;
         public KundenAusgabe()
         {
             InitializeComponent();
             _context.Besuchers
-            .Load();                         // Lade alle Entitäten
-
+            .Load();                         
 
             DisplayView = CollectionViewSource.GetDefaultView(_context.Besuchers.Local.ToObservableCollection());
             DataContext = DisplayView;
         }
 
+        //Click-Events
         private void KundeLöschen_Click(object sender, RoutedEventArgs e)
         {
             KundeLöschen KundeLöschenWindow = new KundeLöschen();

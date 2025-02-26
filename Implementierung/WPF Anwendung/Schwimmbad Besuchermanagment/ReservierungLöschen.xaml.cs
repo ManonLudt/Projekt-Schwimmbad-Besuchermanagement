@@ -48,7 +48,7 @@ namespace Schwimmbad_Besuchermanagment
                 return;
             }
 
-            // SQL-Verbindung
+            // Verbindung zur Datenbank aufbauen
             SqlConnectionStringBuilder sqlSb = new SqlConnectionStringBuilder
             {
                 DataSource = @"(LocalDb)\MSSQLLocalDB",
@@ -64,18 +64,14 @@ namespace Schwimmbad_Besuchermanagment
                 {
                     con.Open();
 
-                    // SQL-Anweisung zum Löschen der Reservierung
                     string query = "DELETE FROM Reservierung WHERE Id_Reservierung = @IdReservierung";
 
                     using (SqlCommand command = new SqlCommand(query, con))
                     {
-                        // Parameter für die SQL-Anweisung hinzufügen
                         command.Parameters.AddWithValue("@IdReservierung", idReservierung);
 
-                        // Ausführen der SQL-Anweisung
                         int result = command.ExecuteNonQuery();
 
-                        // Prüfen, ob die Reservierung erfolgreich gelöscht wurde
                         if (result > 0)
                         {
                             MessageBox.Show("Reservierung erfolgreich gelöscht!");

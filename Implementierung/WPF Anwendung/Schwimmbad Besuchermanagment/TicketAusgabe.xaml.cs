@@ -23,10 +23,8 @@ namespace Schwimmbad_Besuchermanagment
     /// </summary>
     public partial class TicketAusgabe : Page
     {
-        // Der Kontext wird als Klassenvariable angelegt, damit alle Methoden auf denselben Kontext zugreifen können.
         private BesuchermanagmentDatenbankContext _context = new BesuchermanagmentDatenbankContext();
 
-        //private ListCollectionView DisplayView;
         private ICollectionView DisplayView;
         public TicketAusgabe()
         {
@@ -36,6 +34,7 @@ namespace Schwimmbad_Besuchermanagment
             DataContext = DisplayView;
         }
 
+        //Click-Events
         private void TicketLöschen_Click(object sender, RoutedEventArgs e)
         {
             TicketLöschen TicketLöschenWindow = new TicketLöschen();

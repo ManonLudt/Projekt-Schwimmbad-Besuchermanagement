@@ -35,13 +35,13 @@ namespace Schwimmbad_Besuchermanagment
                 if (!int.TryParse(txtKundeID.Text, out int tempID))
                 {
                     MessageBox.Show("Ungültige KundenID!");
-                    return;  // Rückgabe, falls ID ungültig
+                    return; 
                 }
 
                 if (tempID == 0)
                 {
                     MessageBox.Show("Die KundenID darf nicht 0 sein!");
-                    return;  // Rückgabe, falls ID ungültig
+                    return; 
                 }
                 idKunde = tempID;
             }
@@ -53,6 +53,7 @@ namespace Schwimmbad_Besuchermanagment
                 return;
             }
 
+            // Verbindung zur Datenbank aufbauen
             SqlConnectionStringBuilder sqlSb = new SqlConnectionStringBuilder
             {
                 DataSource = @"(LocalDb)\MSSQLLocalDB",
@@ -68,18 +69,14 @@ namespace Schwimmbad_Besuchermanagment
                 {
                     con.Open();
 
-                    // SQL-Anweisung zum Löschen des Besuchers
                     string query = "DELETE FROM Besucher WHERE Id_Besucher = @IdKunde";
 
                     using (SqlCommand command = new SqlCommand(query, con))
                     {
-                        // Parameter für die SQL-Anweisung hinzufügen
                         command.Parameters.AddWithValue("@IdKunde", idKunde);
 
-                        // Ausführen der SQL-Anweisung
                         int result = command.ExecuteNonQuery();
 
-                        // Prüfen, ob der Kunde erfolgreich gelöscht wurde
                         if (result > 0)
                         {
                             MessageBox.Show("Kunde erfolgreich gelöscht!");

@@ -28,7 +28,7 @@ namespace Schwimmbad_Besuchermanagment
 
         private void ReservierungÄndern_Click(object sender, RoutedEventArgs e)
         {
-            // Überprüfen, ob die ReservierungsID eingegeben wurde und gültig ist
+            // Überprüfen, ob die IDs eingegeben wurde und gültig ist
             if (string.IsNullOrWhiteSpace(txtReservierungID.Text))
             {
                 MessageBox.Show("Bitte eine ReservierungID eingeben!");
@@ -61,6 +61,7 @@ namespace Schwimmbad_Besuchermanagment
                 ticketID = tempTicketID;
             }
 
+            // Verbindung zur Datenbank aufbauen
             SqlConnectionStringBuilder sqlSb = new SqlConnectionStringBuilder
             {
                 DataSource = @"(LocalDb)\MSSQLLocalDB",
@@ -72,12 +73,10 @@ namespace Schwimmbad_Besuchermanagment
             // SQL-Verbindung verwenden
             try
             {
-                // SQL-Verbindung öffnen
                 using (SqlConnection con = new SqlConnection(sqlSb.ConnectionString))
                 {
                     con.Open();
 
-                    // Hole die aktuelle Reservierung, um die bestehenden Daten abzurufen
                     string queryReservierung = "SELECT * FROM Reservierung WHERE ID_Reservierung = @ReservierungID";
                     SqlCommand cmdReservierung = new SqlCommand(queryReservierung, con);
                     cmdReservierung.Parameters.AddWithValue("@ReservierungID", reservierungID);
@@ -89,7 +88,6 @@ namespace Schwimmbad_Besuchermanagment
                         return;
                     }
 
-                    // Vorhandene Daten speichern
                     string vorname = readerReservierung["Vorname"].ToString();
                     string nachname = readerReservierung["Nachname"].ToString();
                     string status = readerReservierung["Status"].ToString();
@@ -97,7 +95,6 @@ namespace Schwimmbad_Besuchermanagment
                     int rabatt = Convert.ToInt32(readerReservierung["Rabatt"]);
                     readerReservierung.Close();
 
-                    // Falls KundenID eingegeben wurde, die entsprechende Kundendaten aus der Datenbank holen
                     if (kundenID.HasValue)
                     {
                         string queryKunde = "SELECT * FROM Besucher WHERE ID_Besucher = @KundenID";
@@ -117,7 +114,6 @@ namespace Schwimmbad_Besuchermanagment
                         readerKunde.Close();
                     }
 
-                    // Falls TicketID eingegeben wurde, die entsprechende Ticketbezeichnung aus der Datenbank holen
                     if (ticketID.HasValue)
                     {
                         string queryTicket = "SELECT Bezeichnung FROM Ticket WHERE ID_Ticket = @TicketID";
@@ -135,7 +131,7 @@ namespace Schwimmbad_Besuchermanagment
                         readerTicket.Close();
                     }
 
-                    // Berechne den Rabatt basierend auf dem Kundenstatus, falls dieser geändert wurde
+                    //Rabatte für Status
                     if (status == "Schüler")
                     {
                         rabatt = 10;
@@ -145,7 +141,6 @@ namespace Schwimmbad_Besuchermanagment
                         rabatt = 5;
                     }
 
-                    // Update der Reservierung mit den neuen Werten
                     string updateQuery = "UPDATE Reservierung SET " +
                                          "Vorname = @Vorname, " +
                                          "Nachname = @Nachname, " +
@@ -162,7 +157,6 @@ namespace Schwimmbad_Besuchermanagment
                     cmdUpdate.Parameters.AddWithValue("@Rabatt", rabatt);
                     cmdUpdate.Parameters.AddWithValue("@ReservierungID", reservierungID);
 
-                    // Update ausführen
                     cmdUpdate.ExecuteNonQuery();
 
                     MessageBox.Show("Reservierung erfolgreich geändert!");

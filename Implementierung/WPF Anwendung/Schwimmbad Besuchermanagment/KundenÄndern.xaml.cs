@@ -27,20 +27,20 @@ namespace Schwimmbad_Besuchermanagment
 
         private void KundeÄndern_Click(object sender, RoutedEventArgs e)
         {
-            // Eingabewerte aus den Textboxen holen
+            // ID wird geprüft
             int? idBesucher = null;
             if (!string.IsNullOrEmpty(txtKundeID.Text))
             {
                 if (!int.TryParse(txtKundeID.Text, out int tempID))
                 {
                     MessageBox.Show("Ungültige KundenID!");
-                    return;  // Rückgabe, falls ID ungültig
+                    return;  
                 }
 
                 if (tempID == 0)
                 {
                     MessageBox.Show("Die KundenID darf nicht 0 sein!");
-                    return;  // Rückgabe, falls ID ungültig
+                    return;  
                 }
                 idBesucher = tempID;
             }
@@ -48,19 +48,20 @@ namespace Schwimmbad_Besuchermanagment
             string vorname = txtKundenVorname.Text;
             string nachname = txtKundenNachname.Text;
 
+            //Alter wird geprüft
             int? alterKunde = null;
             if (!string.IsNullOrEmpty(txtKundenalter.Text))
             {
                 if (!int.TryParse(txtKundenalter.Text, out int tempAlter))
                 {
                     MessageBox.Show("Ungültiges Alter!");
-                    return;  // Rückgabe, falls Alter ungültig
+                    return;  
                 }
 
                 if (tempAlter <= 9)
                 {
                     MessageBox.Show("Alter muss größer als 9 sein");
-                    return;  // Rückgabe, falls Alter ungültig
+                    return; 
                 }
                 alterKunde = tempAlter;
             }
@@ -69,10 +70,9 @@ namespace Schwimmbad_Besuchermanagment
             if (idBesucher == null && string.IsNullOrEmpty(vorname) && string.IsNullOrEmpty(nachname) && alterKunde == null)
             {
                 MessageBox.Show("Bitte füllen Sie mindestens ein Feld aus.");
-                return;  // Keine Eingaben, um Änderungen vorzunehmen
+                return;  
             }
 
-            // Status aus den Checkboxen ermitteln
             string status = "";
             if (chkKeinen.IsChecked == true)
             {
@@ -87,6 +87,7 @@ namespace Schwimmbad_Besuchermanagment
                 status = "Student";
             }
 
+            // Verbindung zur Datenbank aufbauen
             SqlConnectionStringBuilder sqlSb = new SqlConnectionStringBuilder
             {
                 DataSource = @"(LocalDb)\MSSQLLocalDB",
@@ -102,29 +103,24 @@ namespace Schwimmbad_Besuchermanagment
                 {
                     con.Open();
 
-                    // Erstelle die SQL-Anweisung zum Aktualisieren des Kunden
                     string query = "UPDATE Besucher SET ";
                     List<string> updateFields = new List<string>();
 
-                    // Wenn Vorname eingegeben wurde, zum Update-Statement hinzufügen
                     if (!string.IsNullOrEmpty(vorname))
                     {
                         updateFields.Add("Vorname = @Vorname");
                     }
 
-                    // Wenn Nachname eingegeben wurde, zum Update-Statement hinzufügen
                     if (!string.IsNullOrEmpty(nachname))
                     {
                         updateFields.Add("Nachname = @Nachname");
                     }
 
-                    // Wenn Alter eingegeben wurde, zum Update-Statement hinzufügen
                     if (alterKunde.HasValue)
                     {
                         updateFields.Add("AlterKunde = @Alter");
                     }
 
-                    // Wenn Status ausgewählt wurde, zum Update-Statement hinzufügen
                     if (!string.IsNullOrEmpty(status))
                     {
                         updateFields.Add("Status = @Status");
@@ -138,12 +134,11 @@ namespace Schwimmbad_Besuchermanagment
                     else
                     {
                         MessageBox.Show("Bitte füllen Sie mindestens ein Feld aus, um Änderungen vorzunehmen.");
-                        return; // Keine Änderungen, wenn keine Eingabe erfolgt
+                        return; 
                     }
 
                     using (SqlCommand command = new SqlCommand(query, con))
                     {
-                        // Parameter für die SQL-Anweisung hinzufügen
                         command.Parameters.AddWithValue("@IdBesucher", idBesucher);
 
                         if (!string.IsNullOrEmpty(vorname))
@@ -155,10 +150,8 @@ namespace Schwimmbad_Besuchermanagment
                         if (!string.IsNullOrEmpty(status))
                             command.Parameters.AddWithValue("@Status", status);
 
-                        // Ausführen der SQL-Anweisung
                         int result = command.ExecuteNonQuery();
 
-                        // Prüfen, ob die Aktualisierung erfolgreich war
                         if (result > 0)
                         {
                             MessageBox.Show("Kunde erfolgreich aktualisiert!");
