@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Schwimmbad_Besuchermanagment"
         mc:Ignorable="d"
-        Title="Registrierung" Height="450" Width="400" FontSize="14">
+        Title="Registrierung" Height="450" Width="410" FontSize="14">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -64,54 +64,87 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <StackPanel HorizontalAlignment="Center" >
-            <Label HorizontalAlignment="Left" 
+        <Label HorizontalAlignment="Left" 
                 FontSize="22" 
                 Foreground="DeepSkyBlue"
-                FontWeight="Bold">Registrierung</Label>
-            <Label Margin="0 50 0 0"
+                FontWeight="Bold"
+                Margin="60 0 0 0">Registrierung</Label>
+        <Label Margin="25 90 0 0"
                 FontFamily="Arial" 
                 Foreground="DarkGray" 
                 Width="300">Benutzername:</Label>
-            <TextBox
+        <TextBox 
                 Name="txtBenutzername"
                 FontFamily="Arial"  
                 Background="#FFF6F6F6" 
                 BorderBrush="#FFF6F6F6" 
-                Width="300"></TextBox>
-            <Label Margin="0 5 0 0"
+                Width="300"
+                Height="15"
+                Margin="35 0 0 175"></TextBox>
+        <Label  Margin="25 135 0 0"
                 FontFamily="Arial" 
                 Foreground="DarkGray" 
                 Width="300">Passwort:</Label>
-            <PasswordBox 
+        <PasswordBox 
                 Name="pwdPasswort"
-                FontFamily="Arial" 
+                FontFamily="Arial"  
                 Background="#FFF6F6F6" 
                 BorderBrush="#FFF6F6F6" 
-                Width="300"></PasswordBox>
-            <TextBox
-                Name="txtPassword"
+                Width="300"
+                Height="15"
+                Margin="35 0 0 85"></PasswordBox>
+        <TextBox 
+                Name="txtPasswort"
+                FontFamily="Arial"  
                 Background="#FFF6F6F6" 
                 BorderBrush="#FFF6F6F6" 
-                Width="500"
-                Height="25"
-                Margin="0 70 0 0"
-            Visibility="Collapsed">
-            </TextBox>
-            <Label Margin="0 5 0 0"
+                Width="300"
+                Height="15"
+                Margin="35 0 0 95"
+                Visibility="Collapsed"></TextBox>
+        <CheckBox 
+                Name="showPasswortCheckBox" 
+                FontSize="12" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Margin="373 157 0 0" 
+                Checked="ShowPasswortCheckBox_Checked" 
+                Unchecked="ShowPasswortCheckBox_Unchecked"
+                ToolTip="Passwort zeigen"/>
+        <Label  Margin="25 180 0 0"
                 FontFamily="Arial" 
                 Foreground="DarkGray" 
                 Width="300">Passwort wiederholen:</Label>
-            <PasswordBox 
+        <PasswordBox 
                 Name="pwdPasswortAgain"
-                FontFamily="Arial" 
+                FontFamily="Arial"  
                 Background="#FFF6F6F6" 
                 BorderBrush="#FFF6F6F6" 
-                Width="300"></PasswordBox>
-            <TextBlock x:Name="ErrorAusgabe" Foreground="Red" FontSize="12"></TextBlock>
-        </StackPanel>
-
-        <Button Style="{DynamicResource RoundedButtonStyle}" Content="Benutzer erstellen" Click="BenutzerRegestrierenClick" Margin="0 220 0 0"
+                Width="300"
+                Height="15"
+                Margin="35 5 0 0"></PasswordBox>
+        <TextBox 
+                Name="txtPasswortAgain"
+                FontFamily="Arial"  
+                Background="#FFF6F6F6" 
+                BorderBrush="#FFF6F6F6" 
+                Width="300"
+                Height="15"
+                Margin="35 0 0 5"
+                Visibility="Collapsed"></TextBox>
+        <CheckBox 
+                Name="showPasswortAgainCheckBox" 
+                FontSize="12" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Margin="373 201 0 0" 
+                Checked="ShowPasswortAgainCheckBox_Checked" 
+                Unchecked="ShowPasswortAgainCheckBox_Unchecked"
+                ToolTip="Passwort zeigen"/>
+        <TextBlock x:Name="ErrorAusgabe" Foreground="Red" 
+                   Margin="68 220 0 0"
+                   FontSize="12"></TextBlock>
+        <Button Style="{DynamicResource RoundedButtonStyle}" Content="erstellen" Click="BenutzerRegestrierenClick" Margin="0 220 0 0"
                 Height="35"
                 FontFamily="Arial" 
                 FontSize="16" 
@@ -119,5 +152,7 @@
                 Background="DeepSkyBlue" 
                 Foreground="White" 
                 />
+
     </Grid>
 </Window>
+

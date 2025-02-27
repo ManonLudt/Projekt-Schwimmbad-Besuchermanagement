@@ -27,17 +27,36 @@ namespace Schwimmbad_Besuchermanagment
 
         private void BenutzerRegestrierenClick(object sender, RoutedEventArgs e)
         {
-            string benutzername = txtBenutzername.Text; // Angenommene Textbox für den Benutzernamen
-            string passwort = pwdPasswort.Password; // Angenommene Textbox für das Passwort
+            string benutzername = txtBenutzername.Text; 
+            string passwort = pwdPasswort.Password; 
             string passwortAgain = pwdPasswortAgain.Password;
 
-            // Überprüfen, ob alle Felder ausgefüllt sind
+            // Überprüft Eingaben
             if (string.IsNullOrEmpty(benutzername) || string.IsNullOrEmpty(passwort) || string.IsNullOrEmpty(passwortAgain))
             {
                 MessageBox.Show("Bitte füllen Sie alle Felder aus.");
-                return; // Abbruch, wenn ein Feld leer ist
+                return;
             }
 
+            if (!int.TryParse(passwort, out int passwortInt))
+            {
+                MessageBox.Show("Das Passwort darf nur Zahlen enthalten.");
+                return; 
+            }
+
+            if (passwort.Length < 4)
+            {
+                MessageBox.Show("Das Passwort muss mindestens 4 Zeichen lang sein.");
+                return; 
+            }
+
+            if (passwort.Length > 10)
+            {
+                MessageBox.Show("Das Passwort darf maximal 10 Zeichen lang sein.");
+                return;
+            }
+
+            // Überprüft, ob die Passwörter übereinstimmen
             if (passwort == passwortAgain)
             {
                 // Verbindung zur Datenbank aufbauen
@@ -56,16 +75,14 @@ namespace Schwimmbad_Besuchermanagment
                     {
                         con.Open();
 
-                        // SQL-Befehl, um den neuen Benutzer hinzuzufügen
+                        // Benutzer wird hinzuzufügt
                         string sqlInsertUser = "INSERT INTO Benutzer (Benutzername, Passwort) VALUES (@username, @password)";
 
                         using (SqlCommand command = new SqlCommand(sqlInsertUser, con))
                         {
-                            // Parameter für den SQL-Befehl hinzufügen
                             command.Parameters.AddWithValue("@username", benutzername);
-                            command.Parameters.AddWithValue("@password", passwort);
+                            command.Parameters.AddWithValue("@password", passwortInt); 
 
-                            // Befehl ausführen, um den Benutzer hinzuzufügen
                             int rowsAffected = command.ExecuteNonQuery();
 
                             if (rowsAffected > 0)
@@ -81,17 +98,42 @@ namespace Schwimmbad_Besuchermanagment
                     }
                     catch (Exception ex)
                     {
-                        // Fehlerbehandlung
                         MessageBox.Show("Fehler: " + ex.Message);
                     }
                 }
             }
+
             else
             {
+                // Falls die Passwörter nicht übereinstimmen
                 pwdPasswort.BorderBrush = Brushes.Red;
                 pwdPasswortAgain.BorderBrush = Brushes.Red;
                 ErrorAusgabe.Text = "Passwort stimmt nicht überein";
             }
+        }
+
+        private void ShowPasswortCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            txtPasswort.Text = pwdPasswort.Password;
+
+            txtPasswort.Visibility = Visibility.Visible;
+        }
+
+        private void ShowPasswortCheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            txtPasswort.Visibility = Visibility.Collapsed;
+        }
+
+        private void ShowPasswortAgainCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            txtPasswortAgain.Text = pwdPasswortAgain.Password;
+
+            txtPasswortAgain.Visibility = Visibility.Visible;
+        }
+
+        private void ShowPasswortAgainCheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            txtPasswortAgain.Visibility = Visibility.Collapsed;
         }
     }
 }
